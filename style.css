@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 0;
+    text-transform: capitalize;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* ------------------------header----------------------------- */
+
+#titles {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background-color: #333;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+}
+
+#titles .stick {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#titles .name {
+    font-size: 1rem;
+    color: #ffd31d;
+}
+
+
+/* -------------form--------------------------------- */
+
+#form {
+    margin-top: 8rem;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 10%;
+    padding-left: 3rem;
+}
+
+#form #title,
+#form #note,
+#task {
+    padding: .6rem;
+    width: 40%;
+    border: 2px solid #ffd31d;
+    border-radius: 5px;
+}
+
+#form .create,
+#noteAction,
+#taskAction,
+.createTask {
+    border-radius: 200px;
+    padding: .6rem;
+    background-color: #ffd31d;
+    border: none;
+}
+
+#form .create:hover,
+#noteAction:hover,
+#taskAction:hover,
+.createTask:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* #form .create:active {
+    border: 2px solid #333;
+    box-shadow: inset 0 0 5px #000000;
+} */
+
+#note {
+    position: relative;
+}
+
+.nonotef {
+    font-size: 2rem;
+    margin: 20px 0;
+    left: 30%;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* -----------------------Added Note----------------------------- */
+
+#noteslist,
+li {
+    list-style: none;
+}
+
+#noteslist {
+    overflow: hidden;
+    padding: 3em 2em;
+}
+
+#noteslist li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffd31d;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+}
+
+#noteslist li {
+    margin: 1em;
+    float: left;
+    position: relative;
+    /*for delete icon*/
+}
+
+#noteslist li h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+#noteslist li p {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 1rem;
+}
+
+.delete {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: 4px double white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#noteslist li a {
+    transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    cursor: default;
+}
+
+#noteslist li a:hover,
+#noteslist li a:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+
+
+/* --------------------------------------------Main Page---------------- */
+
+.headings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffd31d;
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+#noteAction,
+#taskAction {
+    width: 40%;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+
+
+/* ---------------------------Task----------------------- */
+
+#formTask {
+    width: 100%;
+    margin-top: 8rem;
+    padding-left: 3rem;
+}
+
+#Task {
+    width: 70%;
+}
+
+#output {
+    width: 75%;
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    border: 3px solid #ffd31d;
+    border-radius: 5px;
+}
+
+#mainOut {
+    width: 100%
+}
+
+#editTask,
+#deleteTask,
+.createTask {
+    cursor: pointer;
+}
+
+
+/* ---------------------------Medium And Small Screen--------------------------- */
+
+@media screen and (max-width:768px) {
+    #form {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 5rem;
+    }
+    #formTask {
+        width: 100%;
+    }
+    #task {
+        width: 80%;
+    }
+    .createTask {
+        display: block;
+        width: 100px;
+        margin-top: 20px;
+    }
+    #form #title,
+    #form #note {
+        margin: 1rem auto;
+        display: block;
+        width: 90%;
+    }
+    .nonotef {
+        left: 0;
+    }
+    #titles .stick {
+        font-size: 2rem;
+    }
+    .nonotef {
+        font-size: 1.5rem;
+    }
+    #titles .name {
+        font-size: .8rem;
+    }
+    #noteslist li {
+        margin-left: 2.5rem;
+    }
+}

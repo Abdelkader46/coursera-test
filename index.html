@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div id="titles">
+        <h1 class="stick">Stick-it Notes</h1>
+        <p class="name">Keep-in Touch!</p>
+    </div>
+    <div id="form">
+        <input type="text" name="Title" id="title" placeholder="Title">
+        <input type="text" name="Note" id="note" placeholder="Note content">
+        <input type="button" id="createNote" value="Create Sticky" class="create" onclick="createNewNoteAction()"></input>
+    </div>
+
+
+
+    <div class="note">
+
+        <ul id="noteslist">
+
+
+
+        </ul>
+
+    </div>
+
+    <script src="scripts/note.js"></script>
+</body>
+
+</html>
